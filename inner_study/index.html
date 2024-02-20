@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1">
+
+    </div>
+    <script>
+        const box = document.querySelector(".box");
+
+        // 1번 방법
+        const newDiv = document.createElement("div");
+        const testText = document.createComment("test");
+
+        newDiv.appendChild(testText);       //  <div>test</div>
+        box.appendChild(newDiv);
+
+        // 2번 방법
+        box.innerHTML = `<div>test</div>`;
+
+    </script>
+</body>
+</html>
